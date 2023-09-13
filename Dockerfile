@@ -1,20 +1,12 @@
-# Use the official Node.js image as the base image
-FROM node:18
-
-# Set the working directory in the container
+FROM node:lts AS runtime
 WORKDIR /app
 
-# Copy the application files into the working directory
-COPY . /app
+COPY . .
 
-# Install the application dependencies
 RUN npm install
-
-# Build the React application
 RUN npm run build
 
-# Expose port 3000
-EXPOSE 8080
 
-# Define the entry point for the container
+ENV PORT=8080
+EXPOSE 8080
 CMD ["npm", "start"]
