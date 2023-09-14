@@ -1,22 +1,9 @@
 ---
-import '../styles/global.css'
-
+import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "Blog page"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-		<h1>The {pageTitle}!</h1>
+<BaseLayout pageTitle={pageTitle}>
         <hr>
         <ul>
             <li><a href="/posts/post-1/">Post 1</a></li>
@@ -27,5 +14,5 @@ const pageTitle = "Blog page"
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, dolor mollitia. In, quasi voluptates, minima unde officiis eius dolorum ad vel iusto tenetur dolor nostrum ab, illo cum rerum tempora.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, odio laudantium consequuntur, quam pariatur hic unde enim distinctio, earum magni doloribus perspiciatis nobis ipsam aliquam odit perferendis corporis ex. Amet.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque facilis dolorem non molestiae expedita reiciendis, adipisci nihil veritatis enim quas culpa ratione consequuntur quae laborum quam perferendis omnis doloribus. Porro!</p>
-	</body>
-</html>
+
+   </BaseLayout>
